@@ -1,0 +1,60 @@
+#content_div
+{
+	z-index: 1000;
+	position:absolute;  
+	border: 1px solid #EFEFEF;
+	background-color: #FFFFFF;
+	left: 22px;
+	top: 8%;
+	width: 96.5%;
+	height: 87%;
+	display: none;
+	
+}
+
+#module-container
+{
+	height: 94.5%;
+	width: 100%;
+	overflow: auto;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#module-header
+{
+	background-color: #5ABA47;
+	height: 35px;
+	line-height: 35px;
+	border-left: 1px solid #5ABA47;
+	border-right: 1px solid #5ABA47;
+}
+
+.l2n_modal
+{
+	transform: translate(0px, 0px);
+	transition: transform 0.3s ease-out 0s;
+	position: relative;
+	border: 1px solid #EFEFEF;
+	background-color: #FFFFFF;
+	width: 80%;
+	height: 80%;
+	margin: 5% auto;
+	display: none;
+	overflow: auto;
+}
+
+
+.l2n_overlay
+{
+	z-index: 1900;
+	position:fixed; 
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	overflow:hidden;
+	outline:0; 
+	display: none;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%) repeat fixed 0 0 rgba(0, 0, 0, 0);
+}

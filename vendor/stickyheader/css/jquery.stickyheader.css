@@ -1,0 +1,89 @@
+@media only screen and (min-width: 559px) {
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #FFFFFF;
+}
+td, th {
+	min-width: 150px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+th {
+    font-weight: bold;
+    color: #000000;
+    white-space: nowrap; 
+	background: #DDDDDD;
+	border: 1px solid #8AC452 !important;
+}
+
+td
+{
+	border: 1px solid #8AC452 !important;
+}
+
+tbody tr:nth-child(2n-1) {
+    background-color: #F5F5F5;
+    transition: all .125s ease-in-out;
+}
+tbody tr:hover {
+    background-color: rgba(129,208,177,.3);
+}
+
+/* For appearance */
+.sticky-wrap {
+	overflow-x: auto;
+	overflow-y: auto;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.sticky-wrap .sticky-thead,
+.sticky-wrap .sticky-col,
+.sticky-wrap .sticky-intersect {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all .125s ease-in-out;
+	z-index: 50;
+	width: auto; /* Prevent table from stretching to full size */
+}
+	.sticky-wrap .sticky-thead {
+		box-shadow: 0 0.25em 0.1em -0.1em rgba(0,0,0,.125);
+		z-index: 100;
+		width: 100%; /* Force stretch */
+	}
+	.sticky-wrap .sticky-intersect {
+		opacity: 1;
+		z-index: 150;
+
+	}
+		.sticky-wrap .sticky-intersect th {
+			background-color: #666;
+			color: #eee;
+		}
+.sticky-wrap td,
+.sticky-wrap th {
+	box-sizing: border-box;
+}
+
+/* Not needed for sticky header/column functionality */
+td.user-name {
+	text-transform: capitalize;
+}
+.sticky-wrap.overflow-y {
+	overflow-y: auto;
+	max-height: 50vh;
+}
+
+}
+
+@media only screen and (max-width: 559px) {
+	tbody tr:first-child th
+	{
+		margin-top: 0px !important;
+	}
+}
